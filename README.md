@@ -1,2 +1,2 @@
-# android-studio-ii-integracoes-e-recursos
-Continuação do curso de Android usando o Android Studio
+# Finalizaço do Projeto de Agenda do Curso Android da ALura
+Finalizaço do Curso de Android da Alura
