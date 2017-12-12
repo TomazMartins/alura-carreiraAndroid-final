@@ -17,35 +17,35 @@ import br.com.alura.schedule.modelo.Student;
 
 
 public class StudentAdapter extends BaseAdapter {
-    private final List<Student> students;
-    private final Context context;
+    private final List<Student> mStudentList;
+    private final Context mContext;
 
     public StudentAdapter( Context context, List<Student> students ) {
-        this.context = context;
-        this.students = students;
+        this.mContext = context;
+        this.mStudentList = students;
     }
 
     @Override
     public int getCount() {
-        return students.size();
+        return mStudentList.size();
     }
 
     @Override
     public Object getItem( int position ) {
-        return students.get( position );
+        return mStudentList.get( position );
     }
 
     @Override
     public long getItemId( int position ) {
-        return students.get( position ).getId();
+        return mStudentList.get( position ).getId();
     }
 
     @Override
     public View getView( int position, View convertView, ViewGroup parent ) {
-        Student student = students.get( position );
+        Student student = mStudentList.get( position );
         View view = convertView;
 
-        LayoutInflater inflater = LayoutInflater.from( context );
+        LayoutInflater inflater = LayoutInflater.from( mContext );
 
         if( view == null ) {
             view = inflater.inflate( R.layout.list_item, parent, false );
@@ -57,12 +57,25 @@ public class StudentAdapter extends BaseAdapter {
         TextView fieldPhone = (TextView) view.findViewById( R.id.item_phone );
         fieldPhone.setText( student.getPhone() );
 
+        TextView fieldAddress = (TextView) view.findViewById( R.id.item_address );
+
+        if( fieldAddress != null ) {
+            fieldAddress.setText( student.getAddress() );
+        }
+
+        TextView fieldWebsite = (TextView) view.findViewById( R.id.item_website );
+
+        if( fieldWebsite != null ) {
+            fieldWebsite.setText( student.getWebsite() );
+        }
+
         ImageView fieldPhoto = (ImageView) view.findViewById( R.id.item_photo );
         String pathPhoto = student.getPathPhoto();
 
         if( pathPhoto != null ) {
             Bitmap bitmap = BitmapFactory.decodeFile( pathPhoto );
             Bitmap reducedBitmap = Bitmap.createScaledBitmap( bitmap, 100, 100, true );
+
             fieldPhoto.setImageBitmap( reducedBitmap );
             fieldPhoto.setScaleType( ImageView.ScaleType.FIT_XY );
         }
