@@ -1,4 +1,4 @@
-package br.com.alura.agenda;
+package br.com.alura.schedule;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -7,9 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
 
-/**
- * Created by renan on 20/01/16.
- */
+
 public class WebClient {
     public String post(String json) {
         try {
@@ -26,14 +24,15 @@ public class WebClient {
             connection.connect();
 
             Scanner scanner = new Scanner(connection.getInputStream());
-            String resposta = scanner.next();
-            return resposta;
+            String response = scanner.next();
+
+            return response;
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return null;
     }
-
 }

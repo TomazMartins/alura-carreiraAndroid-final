@@ -1,4 +1,4 @@
-package br.com.alura.agenda;
+package br.com.alura.schedule;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
