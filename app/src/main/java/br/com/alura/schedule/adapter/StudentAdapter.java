@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import br.com.alura.schedule.R;
-import br.com.alura.schedule.modelo.Student;
+import br.com.alura.schedule.models.Student;
 
 
 public class StudentAdapter extends BaseAdapter {

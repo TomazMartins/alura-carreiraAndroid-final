@@ -6,7 +6,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 
-import br.com.alura.schedule.modelo.Student;
+import br.com.alura.schedule.models.Student;
 
 public class FormHelper {
 

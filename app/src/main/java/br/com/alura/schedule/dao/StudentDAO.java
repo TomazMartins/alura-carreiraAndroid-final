@@ -10,7 +10,7 @@ import android.support.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.alura.schedule.modelo.Student;
+import br.com.alura.schedule.models.Student;
 
 public class StudentDAO extends SQLiteOpenHelper {
     public StudentDAO( Context context ) {

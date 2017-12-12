@@ -16,7 +16,7 @@ import android.widget.Toast;
 import java.io.File;
 
 import br.com.alura.schedule.dao.StudentDAO;
-import br.com.alura.schedule.modelo.Student;
+import br.com.alura.schedule.models.Student;
 
 public class FormActivity extends AppCompatActivity {
     public static final int CAMERA_CODE = 567;

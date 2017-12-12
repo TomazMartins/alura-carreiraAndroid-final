@@ -1,4 +1,4 @@
-package br.com.alura.schedule.modelo;
+package br.com.alura.schedule.models;
 
 import java.io.Serializable;
 

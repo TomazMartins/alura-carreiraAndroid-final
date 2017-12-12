@@ -5,7 +5,7 @@ import org.json.JSONStringer;
 
 import java.util.List;
 
-import br.com.alura.schedule.modelo.Student;
+import br.com.alura.schedule.models.Student;
 
 public class StudentConverter {
     public String convertToJSON( List<Student> students ) {

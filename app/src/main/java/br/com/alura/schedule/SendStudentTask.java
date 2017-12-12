@@ -9,7 +9,7 @@ import java.util.List;
 
 import br.com.alura.schedule.converter.StudentConverter;
 import br.com.alura.schedule.dao.StudentDAO;
-import br.com.alura.schedule.modelo.Student;
+import br.com.alura.schedule.models.Student;
 
 
 public class SendStudentTask extends AsyncTask<Void, Void, String> {

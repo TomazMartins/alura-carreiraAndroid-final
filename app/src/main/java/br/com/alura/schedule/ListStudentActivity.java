@@ -19,7 +19,7 @@ import java.util.List;
 
 import br.com.alura.schedule.adapter.StudentAdapter;
 import br.com.alura.schedule.dao.StudentDAO;
-import br.com.alura.schedule.modelo.Student;
+import br.com.alura.schedule.models.Student;
 
 public class ListStudentActivity extends AppCompatActivity {
     private ListView mStudentList;
@@ -79,8 +79,13 @@ public class ListStudentActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected( MenuItem item ) {
         switch( item.getItemId() ) {
-            case R.id.menu_enviar_notas:
+            case R.id.menu_send_grades:
                 new SendStudentTask( this ).execute();
+                break;
+
+            case R.id.menu_request_assessment:
+                Intent toAssessmentActivity = new Intent( this, AssessmentActivity.class );
+                startActivity( toAssessmentActivity );
                 break;
         }
         return super.onOptionsItemSelected( item );
