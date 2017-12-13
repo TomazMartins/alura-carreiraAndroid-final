@@ -1,5 +1,6 @@
 package br.com.alura.schedule.ui.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -44,6 +45,10 @@ public class AssessmentActivity extends AppCompatActivity {
             public void onItemClick( AdapterView<?> parent, View view, int position, long l ) {
                 Assessment currentAssessment = (Assessment) parent.getItemAtPosition( position );
                 Toast.makeText( AssessmentActivity.this, "On: " + currentAssessment.toString(), Toast.LENGTH_SHORT ).show();
+
+                Intent toDetailAssessment = new Intent( AssessmentActivity.this, AssessmentDetailActivity.class );
+                toDetailAssessment.putExtra( "assessment", currentAssessment );
+                startActivity( toDetailAssessment );
             }
         } );
     }

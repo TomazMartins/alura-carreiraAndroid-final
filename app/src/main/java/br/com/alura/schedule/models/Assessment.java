@@ -1,8 +1,9 @@
 package br.com.alura.schedule.models;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Assessment {
+public class Assessment implements Serializable {
     private List<String> mTopics;
     private String mDiscipline;
     private String mDate;

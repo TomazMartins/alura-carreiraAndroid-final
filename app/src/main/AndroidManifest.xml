@@ -33,6 +33,8 @@
 
         <activity android:name=".ui.activities.AssessmentActivity">
         </activity>
+        <activity android:name=".ui.activities.AssessmentDetailActivity">
+        </activity>
     </application>
 
 </manifest>
