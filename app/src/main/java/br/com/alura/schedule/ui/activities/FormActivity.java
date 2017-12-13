@@ -1,4 +1,4 @@
-package br.com.alura.schedule;
+package br.com.alura.schedule.ui.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import java.io.File;
 
+import br.com.alura.schedule.util.helpers.FormHelper;
+import br.com.alura.schedule.R;
 import br.com.alura.schedule.dao.StudentDAO;
 import br.com.alura.schedule.models.Student;
 

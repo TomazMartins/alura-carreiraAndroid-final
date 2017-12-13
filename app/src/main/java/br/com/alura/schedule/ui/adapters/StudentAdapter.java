@@ -1,4 +1,4 @@
-package br.com.alura.schedule.adapter;
+package br.com.alura.schedule.ui.adapters;
 
 import android.content.Context;
 import android.graphics.Bitmap;

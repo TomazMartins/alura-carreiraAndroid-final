@@ -1,4 +1,4 @@
-package br.com.alura.schedule;
+package br.com.alura.schedule.ui.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,11 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import br.com.alura.schedule.R;
 import br.com.alura.schedule.models.Assessment;
 
 public class AssessmentActivity extends AppCompatActivity {

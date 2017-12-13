@@ -1,4 +1,4 @@
-package br.com.alura.schedule;
+package br.com.alura.schedule.util.helpers;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -6,7 +6,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 
+import br.com.alura.schedule.R;
 import br.com.alura.schedule.models.Student;
+import br.com.alura.schedule.ui.activities.FormActivity;
 
 public class FormHelper {
 

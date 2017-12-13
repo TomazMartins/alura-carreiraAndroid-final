@@ -1,4 +1,4 @@
-package br.com.alura.schedule;
+package br.com.alura.schedule.util;
 
 import java.io.IOException;
 import java.io.PrintStream;

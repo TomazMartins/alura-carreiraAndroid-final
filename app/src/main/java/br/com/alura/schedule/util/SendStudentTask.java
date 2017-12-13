@@ -1,4 +1,4 @@
-package br.com.alura.schedule;
+package br.com.alura.schedule.util;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -7,14 +7,14 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import br.com.alura.schedule.converter.StudentConverter;
+import br.com.alura.schedule.util.converters.StudentConverter;
 import br.com.alura.schedule.dao.StudentDAO;
 import br.com.alura.schedule.models.Student;
 
 
 public class SendStudentTask extends AsyncTask<Void, Void, String> {
-    private Context mContext;
     private ProgressDialog mDialog;
+    private Context mContext;
 
     public SendStudentTask( Context context ) {
         this.mContext = context;

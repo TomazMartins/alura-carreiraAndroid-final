@@ -1,4 +1,4 @@
-package br.com.alura.schedule.converter;
+package br.com.alura.schedule.util.converters;
 
 import org.json.JSONException;
 import org.json.JSONStringer;
