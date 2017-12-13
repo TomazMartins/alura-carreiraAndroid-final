@@ -35,6 +35,8 @@
         </activity>
         <activity android:name=".ui.activities.AssessmentDetailActivity">
         </activity>
+        <activity android:name=".ui.activities.AssessmentTabletActivity">
+        </activity>
     </application>
 
 </manifest>

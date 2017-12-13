@@ -29,7 +29,7 @@ public class ListStudentActivity extends AppCompatActivity {
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_lista_alunos );
+        setContentView( R.layout.activity_students );
 
         mStudentList = (ListView) findViewById( R.id.lista_alunos );
 
