@@ -89,6 +89,10 @@ public class ListStudentActivity extends AppCompatActivity {
                 Intent toAssessmentActivity = new Intent( this, AssessmentActivity.class );
                 startActivity( toAssessmentActivity );
                 break;
+            case R.id.menu_map:
+                Intent toMap = new Intent( this, MapsActivity.class );
+                startActivity( toMap );
+                break;
         }
         return super.onOptionsItemSelected( item );
     }

@@ -12,4 +12,10 @@
         android:title="Requisitar Provas"
         android:icon="@drawable/ic_receber"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_map"
+        android:title="Mostrar Mapa"
+        android:icon="@drawable/ic_mapa"
+        app:showAsAction="always" />
 </menu>
