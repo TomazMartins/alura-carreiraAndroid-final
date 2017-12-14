@@ -1,9 +1,10 @@
 package br.com.alura.schedule.ui.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,6 @@ import java.util.List;
 
 import br.com.alura.schedule.R;
 import br.com.alura.schedule.models.Assessment;
-import br.com.alura.schedule.ui.activities.AssessmentDetailActivity;
 
 public class AssessmentFragment extends Fragment {
     @Nullable
@@ -49,9 +49,9 @@ public class AssessmentFragment extends Fragment {
                 Assessment currentAssessment = (Assessment) parent.getItemAtPosition( position );
                 Toast.makeText( getContext(), "On: " + currentAssessment.toString(), Toast.LENGTH_SHORT ).show();
 
-                Intent toDetailAssessment = new Intent( getContext(), AssessmentDetailActivity.class );
-                toDetailAssessment.putExtra( "assessment", currentAssessment );
-                startActivity( toDetailAssessment );
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace( R.id.assessment_placeholder, new AssessmentDetailFragment() )
+                    .commit();
             }
         } );
 
