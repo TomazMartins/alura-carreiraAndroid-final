@@ -38,8 +38,10 @@ public class AssessmentActivity extends AppCompatActivity {
             detailFragment.setArguments( params );
 
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace( R.id.assessment_placeholder, detailFragment )
-                    .commit();
+            transaction.replace( R.id.assessment_placeholder, detailFragment );
+            transaction.addToBackStack( null );
+
+            transaction.commit();
         } else  {
             AssessmentDetailFragment fragment =
                     (AssessmentDetailFragment) getSupportFragmentManager()
