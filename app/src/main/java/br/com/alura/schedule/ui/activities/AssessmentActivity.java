@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import br.com.alura.schedule.R;
+import br.com.alura.schedule.models.Assessment;
 import br.com.alura.schedule.ui.fragments.AssessmentDetailFragment;
 import br.com.alura.schedule.ui.fragments.AssessmentFragment;
 
@@ -26,6 +27,26 @@ public class AssessmentActivity extends AppCompatActivity {
         }
 
         transaction.commit();
+    }
+
+    public void showAssessment( Assessment currentAssessment ) {
+        if( !isLandscape() ) {
+            AssessmentDetailFragment detailFragment = new AssessmentDetailFragment();
+            Bundle params = new Bundle();
+
+            params.putSerializable( "assessment", currentAssessment );
+            detailFragment.setArguments( params );
+
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace( R.id.assessment_placeholder, detailFragment )
+                    .commit();
+        } else  {
+            AssessmentDetailFragment fragment =
+                    (AssessmentDetailFragment) getSupportFragmentManager()
+                            .findFragmentById( R.id.detail_assessment_placeholder );
+
+            fragment.fillFieldsWith( currentAssessment );
+        }
     }
 
     private boolean isLandscape() {
